@@ -6,6 +6,7 @@ var UserDetails = require('./UserDetails');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function StartOver () {
   return (
@@ -21,7 +22,7 @@ function StartOver () {
 function Results(props) {
   if (props.isLoading === true) {
     return (
-      <p>LOADING</p>
+      <Loading text="moment" speed={500}/>
     )
   }
 
